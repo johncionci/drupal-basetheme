@@ -24,16 +24,16 @@ $rem-base: $base-font-size;
 
 // We are using a 1280/24 Grid, this hopefully allows us to maintain and ad based
 // structure for the majority of our content publishing clients.
-$row-width: 128rem;
+$row-width: 121rem;
 $total-columns: 24;
-$column-gutter: 1.2rem;
+$column-gutter: 1rem;
 
 // Media Query Ranges
-$small-range:    (0, 480px);
-$medium-range:   (481px, 800px);
-$large-range:    (801px, 1120px);
-$xlarge-range:   (1121px, 1280px);
-$xxlarge-range:  (1281px, 99999999px);
+$small-range:    (0, 320px);
+$medium-range:  (321px, 480px);
+$large-range:    (481px, 767px);
+$xlarge-range:  (768px, 1023px);
+$xxlarge-range:  (1024px, 999999px);
 
 $screen: "only screen";
 

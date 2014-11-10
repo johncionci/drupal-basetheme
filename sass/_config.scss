@@ -4,12 +4,17 @@
 // VARIABLES
 
 // Font Stacks
-$base-font-stack: sans;
-$alt-font-stack: sans-serif;
+$base-font-stack: Arial, Helvetica, sans-serif;
+$alt-font-stack: Georgia, serif;
 
 // Colors
-$primary-color: #fff;
-$secondary-color: #000;
+$color1: #ffffff; // White
+$color2: #000000; // Black
+$color3: #cccccc; // Light Gray
+$color4: #666666; // Medium Gray
+$color5: #333333; // Dark Gray
+$color6: #D62901; // Red
+$color7: #bbbaba; // Light Medium Gray
 
 // Imports
 //
@@ -40,4 +45,8 @@ $secondary-color: #000;
 
 // Theme Styles
 	@import "base";
+	@import "header";
+	@import "footer";
+	@import "forms";
+	@import "articles";
 	@import "print";

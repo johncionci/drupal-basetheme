@@ -109,6 +109,7 @@
     </div> <!-- header, #header-wrapper -->
 
     <?php if ($page['nav']): ?>
+<<<<<<< HEAD
       <div id="navigation-wrapper">
         <nav id="navigation" class="navigation">
           <?php print render($page['nav']); ?>
@@ -137,6 +138,33 @@
         <?php print render($page['content_top']); ?>
       </section>
     <?php endif; ?>
+=======
+      <nav id="site-navigation">
+        <div class="navigation-inner">
+          <?php print render($page['nav']); ?>
+        </div>
+      </nav>
+    <?php endif; ?>
+
+   <!-- hiding breadcrumbs on front-end -->
+    <?php //if ($breadcrumb): ?>
+     <!--  <div id="breadcrumb-wrapper">
+        <nav id="breadcrumb">
+          <div class="breadcrumb-inner"> -->
+            <?php //print $breadcrumb; ?>
+          <!-- </nav>
+        </div>
+      </div> -->
+    <?php //endif; ?>
+
+    <div id="message-wrapper">
+      <div class="message-wrapper-inner">
+        <div class="message-container">
+          <?php print $messages; ?>
+        </div>
+      </div>
+    </div>
+>>>>>>> upstream/newdcamp
 
     <div id="main-wrapper">
       <main id="main" class="main">
@@ -156,18 +184,24 @@
           </nav>
         <?php endif; ?>
 
+<<<<<<< HEAD
         <?php if ($page['help']): ?>
           <section id="help" class="section help">
             <?php print render($page['help']); ?>
           </section>
         <?php endif; ?>
+=======
+        <section id="content" class="section content">
+          <?php print render($page['help']); ?>
+>>>>>>> upstream/newdcamp
 
-        <?php if ($action_links): ?>
-          <ul class="action-links">
-            <?php print render($action_links); ?>
-          </ul>
-        <?php endif; ?>
+          <?php if ($action_links): ?>
+            <ul class="action-links">
+              <?php print render($action_links); ?>
+            </ul>
+          <?php endif; ?>
 
+<<<<<<< HEAD
         <section id="content" class="section content">
           <?php print render($page['content']); ?>
         </section>
@@ -178,6 +212,25 @@
           </div>
         <?php endif; ?>
 
+=======
+          <?php if ($page['content_top']): ?>
+            <section id="content-top" class="section content-top">
+              <?php print render($page['content_top']); ?>
+            </section>
+          <?php endif; ?>
+
+            <?php print render($page['content']); ?>
+
+          <?php if ($page['content_bottom']): ?>
+            <section id="content-bottom" class="section content-bottom">
+              <?php print render($page['content_bottom']); ?>
+            </section>
+          <?php endif; ?>
+
+          <?php print $feed_icons; ?>
+        </section>
+
+>>>>>>> upstream/newdcamp
         <?php if ($page['sidebar_first']): ?>
           <section id="sidebar-first" class="section sidebar">
             <?php print render($page['sidebar_first']); ?>

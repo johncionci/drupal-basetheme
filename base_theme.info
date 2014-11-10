@@ -16,6 +16,8 @@ stylesheets[print][] = css/print.css
 ; system and module scripts automatically. You can also add scripts
 ; from your template.php with drupal_add_js('scriptname.js', 'theme')
 
+scripts[] = js/modernizr.min.js
+scripts[] = js/respond.min.js
 ; scripts[] = js/script.js
 
 ; REGIONS

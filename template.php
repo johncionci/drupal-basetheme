@@ -8,30 +8,32 @@
 /**
  * Override or insert variables into the html template.
  */
-function oomphbase_preprocess_html(&$variables) {}
+function base_theme_preprocess_html(&$variables) {}
 
 /**
  * Override or insert variables into the page template.
  */
-function oomphbase_preprocess_page(&$variables) {}
+function base_theme_preprocess_page(&$variables) {}
 
 /**
  * Override or insert variables into the region template.
  */
-function oomphbase_preprocess_region(&$variables) {}
+function base_theme_preprocess_region(&$variables) {}
 
 /**
  * Override or insert variables into the node template.
  */
-function oomphbase_preprocess_node(&$variables) {
-	// Output a class on the damn node title
+function base_theme_preprocess_node(&$variables) {
+	// Output a class on the node title
+	// @johncionci
 	$variables['title_attributes_array']['class'][] = 'node-title';
 }
 
 /**
  * Override or insert variables into the block template.
  */
-function oomphbase_preprocess_block(&$variables) {
-	// Output a class on the damn block title
+function base_theme_preprocess_block(&$variables) {
+	// Output a class on the block title
+	// @johncionci
 	$variables['title_attributes_array']['class'][] = 'block-title';
 }
