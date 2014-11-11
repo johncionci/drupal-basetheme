@@ -17,7 +17,7 @@ stylesheets[print][] = css/print.css
 ; from your template.php with drupal_add_js('scriptname.js', 'theme')
 
 scripts[] = js/modernizr.min.js
-scripts[] = js/respond.min.js
+; scripts[] = js/respond.min.js
 ; scripts[] = js/script.js
 
 ; REGIONS
@@ -32,6 +32,7 @@ regions[page_top]     = Page top
 regions[page_bottom]  = Page bottom
 
 ; Other required regions that are not hidden are [help, content, footer]
+regions[utilty]          = Utility
 regions[header]          = Header
 regions[nav]             = Navigation
 regions[help]            = Help
