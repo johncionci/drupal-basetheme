@@ -7,22 +7,22 @@ Origins uses modern technologies but has options to add in fallbacks for those l
 Website: [http://sass-lang.com/](http://sass-lang.com/)
 
 Configuration file can be found at:
-base-theme > sass > _config.scss = order of files
-base-theme > gulpfile.js = compiler settings
+root > sass > _config.scss = order of files
+root > gulpfile.js = compiler settings
 
 ### Gulp
 Website: [http://gulpjs.com/](http://gulpjs.com/)
 
 Configuration file can be found at:
-base-theme > gulpfile.js = gulp functions
-base-theme > package.json = module dependancy list
+root > gulpfile.js = gulp functions
+root > package.json = module dependancy list
 
 Install Directions:
 1. cd into your theme directory
-2. run $ npm install = this will install the module dependancies listed in the base-theme > package.json
+2. run $ npm install = this will install the module dependancies listed in the root > package.json
 3. a new folder called "node_modules" will be created in your theme folder
 
-We added a script to the base-theme > package.json file to remove all ".info" files within the "node_modules" folder, which was causing errors on admin pages and when trying to run drush commands
+We added a script to the root > package.json file to remove all ".info" files within the "node_modules" folder, which was causing errors on admin pages and when trying to run drush commands
 
 In order to use gulp you will have to install [node.js](http://nodejs.org) on you system. This article is a great tutorial on how to get up and running quickly. [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
 
@@ -30,13 +30,13 @@ In order to use gulp you will have to install [node.js](http://nodejs.org) on yo
 Website: [http://susy.oddbird.net/](http://susy.oddbird.net/)
 
 Configuration can be found at:
-base-theme > _config.scss = grid configuration
+root > sass > _config.scss = grid configuration
 
 ### Compass
 Website: [compass-style.org](compass-style.org)
 
 Configuration can be found at:
-base-theme > config.rb = compass configuration
+root > config.rb = compass configuration
 
 ## Support
 This theme supports modern browsers - so IE9+. If you project requires IE8 support their are options availble to help with that.
