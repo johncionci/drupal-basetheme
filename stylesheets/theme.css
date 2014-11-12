@@ -1,0 +1,115 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #333333;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.no-sidebars #content {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.sidebar-first #content {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.sidebar-second #content {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.two-sidebars #content {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#sidebar-first {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.one-sidebar #sidebar-first {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.two-sidebars #sidebar-first {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#sidebar-second {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.one-sidebar #sidebar-second {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.two-sidebars #sidebar-second {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=theme.css.map */

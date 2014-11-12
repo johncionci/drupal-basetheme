@@ -2,20 +2,13 @@
 // This file contains basic theme elements fundamental to all sites.
 
 // Globals
-html {
-	box-sizing: border-box;
-	font-size: $base-font-size;
-}
-
 *, *:before, *:after {
 	box-sizing: inherit;
 }
 
-body {
-	height: 100%;
-	font-family: $base-font-stack;
-	font-size: 16px;
-	color: $color5;
+html {
+	box-sizing: border-box;
+	font-size: $base-font-size;
 }
 
 html,
@@ -23,310 +16,64 @@ body {
 	height: 100%;
 }
 
-<<<<<<< HEAD
-/**
- * Typography
- */
-
-/* Content Components */
-h1, h2, h3, h4, h5, h6 {
-
-}
-
-h1,
-h1 a {
-	font-size: 2rem;
-}
-
-h2,
-h2 a {
-	font-size: 1.8rem;
-}
-
-h3,
-h3 a {
-	font-size: 1.6rem;
-
-}
-
-h4,
-h4 a {
-	font-size: 1.5rem;
-}
-
-h5,
-h5 a {
-	font-size: 1.4rem;
-}
-
-h6,
-h6 a {
-	font-size: 1.3rem;
-=======
-img {
-	width: 100%;
-	height: auto;
+body {
+	height: 100%;
+	font-family: $font-stack-1;
+	font-size: $base-font-size;
+	color: $color-5;
 }
 
 // Typography
-
-h1, h2, h3, h4, h5, h6 {}
-
-h1,
-h1 a {
-	font-size: 4rem;
-	// appears in the name and slogan area
-	&#site-name {
-		a {
-		}
-	}
-	// appears in single node pages
-	&#page-title {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-	}
-}
-
-h2 {
-	font-size: 3rem;
-	margin: 0 0 0.8rem 0;
-	&.block-title,
-	&.block-title a {
-		font-size: 2.8rem;
-		margin-bottom: 0;
-	}
-}
-
-h3 {
-	font-size: 2.3rem;
-}
-
-h4 {
-	font-size: 2rem;
-}
-
-h5 {
-	font-size: 1.8rem;
-}
-
-h6 {
-	font-size: 1.6rem;
->>>>>>> upstream/newdcamp
-}
-
-p, li {
-	line-height: 1.5;
-}
-
-<<<<<<< HEAD
-/* Heading Types */
-h1 {
-	&#page-title {
-
-	}
-}
-
-h2 {
-	&#block-title {
-
-	}
-	&node-title {
-
-	}
-}
-
-/* WYSIWYG Components */
-a {
-
-}
-
-/* Form Components */
-
-/* Media Components */
-img {
-
-}
-
-/* Extras & Elements */
-
-/**
- * Layout
- */
-
-/* Define some rows */
-#header,
-#navigation,
-#breadcrumb,
-#system-messages,
-#content-top,
-#main,
-#content-bottom,
-=======
-a,
-a:link {
-	color: $color6;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
-}
+h1 { font-size: $heading-size-1; }
+h2 { font-size: $heading-size-2; }
+h3 { font-size: $heading-size-3; }
+h4 { font-size: $heading-size-4; }
+h5 { font-size: $heading-size-5; }
+h6 { font-size: $heading-size-6; }
 
 // Layout
 
-// Defining Rows
-#header,
-.navigation-inner,
-#breadcrumb,
-.message-wrapper-inner,
-#main,
->>>>>>> upstream/newdcamp
-#footer {
-	@include grid-row();
-}
-
-<<<<<<< HEAD
-/* Header */
-#header {
-=======
-// Navigation Region
-.region-nav {
-	@include grid-column(24);
-}
->>>>>>> upstream/newdcamp
-
-// Breadcrumb Section
-.breadcrumb-inner {
-	@include grid-column(24);
-}
-
-<<<<<<< HEAD
-/* Navigation */
-#site-navigation {
-	.region-nav {
-=======
-// Message Section
-.message-container {
-	@include grid-column(24);
-}
->>>>>>> upstream/newdcamp
-
-// Content Region
+// Content
 #content {
 	.no-sidebars & {
-		@include grid-column(24);
+		@include span(12);
 	}
 	.sidebar-first & {
-		@include grid-column(24);
-		@media #{$xlarge-up} {
-			@include grid-column(18, $push:6);
-		}
+		@include span(12);
 	}
 	.sidebar-second & {
-		@include grid-column(24);
-		@media #{$xlarge-up} {
-			@include grid-column(18);
-		}
+		@include span(12);
 	}
 	.two-sidebars & {
-		@include grid-column(24);
-		@media #{$xlarge-up} {
-			@include grid-column(12, $push:6);
-		}
+		@include span(12);
 	}
-}
-
-<<<<<<< HEAD
-/* Main Content */
-#main {
-=======
-// Content Inner Regions
-.region-help,
-#content-top,
-.region-content,
-#content-bottom {
-}
->>>>>>> upstream/newdcamp
-
-.tabs {
-	@include grid-column(24);
 }
 
 // Sidebar First Region
 #sidebar-first {
-	@include grid-column(24);
-	@media #{$xlarge-up} {
-		@include grid-column(6, $pull:12);
-	}
+	@include span(12);
 	.one-sidebar & {
-	@media #{$xlarge-up} {
-		@include grid-column(6, $pull:18);
-	}
+		@include span(12);
 	}
 	.two-sidebars & {
+		@include span(12);
 	}
 }
 
 // Sidebar Second Region
 #sidebar-second {
-	@media #{$xlarge-up} {
-		@include grid-column(6);
-		float: right;
-	}
-	@include grid-column(24);
+	@include span(12);
 	.one-sidebar & {
+		@include span(12);
 	}
 	.two-sidebars & {
+		@include span(12);
 	}
 }
 
-<<<<<<< HEAD
-/* Footer */
-#footer {
-
+// Media
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
 }
-=======
-// Blocks
-
-// Sidebar Blocks
-.sidebar {
-	section.block  {
-		margin-bottom: 4rem;
-		@media #{$large-only} {
-			@include grid-column(12);
-			&:nth-child(2n+2) {
-				clear: right;
-				border-left: 0.5rem solid $color1;
-			}
-			&:nth-child(2n+1) {
-				clear: left;
-				border-right: 0.5rem solid $color1;
-			}
-		}
-		h2 {
-			border-bottom: 2px solid $color6;
-			margin-bottom: 1rem;
-		}
-	}
-}
-
-.menu-sidebar-block {
-	ul {
-		@include zero-list;
-		li {
-		}
-	}
-}
-
-.article-featured {
-	ul {
-		li {
-			margin-bottom: 1rem;
-		}
-	}
-	.post-date {
-		color: $color4;
-		font-size: 0.8em;
-		text-transform: uppercase;
-	}
-}
->>>>>>> upstream/newdcamp

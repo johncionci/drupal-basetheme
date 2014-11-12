@@ -1,32 +1,35 @@
 // Plugins
-var gulp = require('gulp'),
-	 watch = require('gulp-watch'),
-	 sass = require('gulp-ruby-sass'),
-	 autoprefixer = require('gulp-autoprefixer'),
-	 plumber = require('gulp-plumber'),
-	 gutil = require('gulp-util'),
-	 rem = require('gulp-pixrem');
+var gulp         = require('gulp'),
+		watch        = require('gulp-watch'),
+		sass         = require('gulp-ruby-sass'),
+		autoprefixer = require('gulp-autoprefixer'),
+		plumber      = require('gulp-plumber'),
+		gutil        = require('gulp-util'),
+		rem          = require('gulp-pixrem'),
+		compass      = require('gulp-compass');
 
-// Outputs an error through plumber plugin
-var onError = function (err) {
-  gutil.beep();
-  console.log(err);
-};
-
-// Styles
-gulp.task('styles', function() {
-	gulp.src(['sass/theme.scss','sass/editor.scss'])
-		.pipe(plumber({ errorHandler: onError }))
-		.pipe(sass({style: 'compressed'}))
-		.pipe(autoprefixer('last 1 version', '> 1%', 'ie 9', 'ie 8', 'ie 7'))
-		.pipe(rem(10))
-		.pipe(gulp.dest('css/'));
+gulp.task('compass', function() {
+  gulp.src('sass/*.scss')
+    .pipe(compass({
+      config_file: 'config.rb',
+      css: 'stylesheets',
+      sass: 'sass',
+      require: ['susy', 'breakpoint']
+    }))
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .on('error', function(err) {
+      // Would like to catch the error here
+    })
+    .pipe(gulp.dest('stylesheets'));
 });
 
 gulp.task('watch', function() {
-	// Watch the sass files
-	gulp.watch('sass/**/*.scss', ['styles']);
+    gulp.watch('sass/*.scss', ['compass']);
 });
 
 // Make all tasks run and then watch for the rest
-gulp.task('default', ['styles', 'watch']);
+gulp.task('default', ['compass', 'watch']);

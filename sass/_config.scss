@@ -4,17 +4,48 @@
 // VARIABLES
 
 // Font Stacks
-$base-font-stack: Arial, Helvetica, sans-serif;
-$alt-font-stack: Georgia, serif;
+$font-stack-1: Arial, Helvetica, sans-serif;
+$font-stack-2: Georgia, serif;
 
 // Colors
-$color1: #ffffff; // White
-$color2: #000000; // Black
-$color3: #cccccc; // Light Gray
-$color4: #666666; // Medium Gray
-$color5: #333333; // Dark Gray
-$color6: #D62901; // Red
-$color7: #bbbaba; // Light Medium Gray
+$color-1: #ffffff; // White
+$color-2: #000000; // Black
+$color-3: #cccccc; // Light Gray
+$color-4: #666666; // Medium Gray
+$color-5: #333333; // Dark Gray
+$color-6: #D62901; // Red
+$color-7: #bbbaba; // Light Medium Gray
+
+// Typography
+$base-font-size: 10px;
+
+$heading-size-1: $base-font-size * 2.4;
+$heading-size-2: $base-font-size * 2.2;
+$heading-size-3: $base-font-size * 2.0;
+$heading-size-4: $base-font-size * 1.8;
+$heading-size-5: $base-font-size * 1.6;
+$heading-size-6: $base-font-size * 1.4;
+
+// Susy
+@import "susy";
+$susy: (
+  columns: 12,
+  global-box-sizing: border-box,
+  debug: (
+    image: show,
+    color: rgba(0,0,0,.4),
+    output: background
+  ),
+);
+
+// Media Query Breakpoints
+// Usage:: @include breakpoint($mq-1);
+$mq-1: 0px 320px;
+$mq-2: 321px 480px;
+$mq-3: 481px 640px;
+$mq-4: 641px 767px;
+$mq-5: 768px 1023px;
+$mq-6: 1024px 9999px;
 
 // Imports
 //
@@ -36,17 +67,7 @@ $color7: #bbbaba; // Light Medium Gray
 
 // CSS Preprocess Logic
 	@import "preprocess";
-	@import "normalize";
-
-// CSS Grid Framework Logic
-	@import "foundation/settings";
-	@import "foundation/components/block-grid";
-	@import "foundation/components/grid";
 
 // Theme Styles
 	@import "base";
-	@import "header";
-	@import "footer";
-	@import "forms";
-	@import "articles";
 	@import "print";

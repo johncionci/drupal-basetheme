@@ -1,21 +1,17 @@
-# About the Oomph Base Theme
-This Base Theme comes with Foundation, SASS, Gulp, Modernizr.js, and Respond.js installed.
+# Oomph Origins
+Origins uses modern technologies but has options to add in fallbacks for those less fortunate browsers. The particuar client requirements will drive the actual process but Origins includes a great starting point for rapid theme development.
 
-## Sass
-We use Sass to compile our CSS. Typically we use the rem unit for everything.
+## Technologies
 
-We are using SASS for our css preprocessor.
+### Sass
+Website: [http://sass-lang.com/](http://sass-lang.com/)
 
 Configuration file can be found at:
 base-theme > sass > _config.scss = order of files
 base-theme > gulpfile.js = compiler settings
 
-Website: http://sass-lang.com/
-
-## Gulp
-Gulp can be used to run a post-compile fix to create fallbacks for all of our rem declarations that are neccessary for IE8.
-
-We are using Gulp for our build tool.
+### Gulp
+Website: [http://gulpjs.com/](http://gulpjs.com/)
 
 Configuration file can be found at:
 base-theme > gulpfile.js = gulp functions
@@ -28,30 +24,25 @@ Install Directions:
 
 We added a script to the base-theme > package.json file to remove all ".info" files within the "node_modules" folder, which was causing errors on admin pages and when trying to run drush commands
 
-Website: http://gulpjs.com/
+In order to use gulp you will have to install [node.js](http://nodejs.org) on you system. This article is a great tutorial on how to get up and running quickly. [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
 
-## Respond.js
-Respond is a library that allows IE6-8 to read media queries which is essential since we are using a grid system. This should only be loaded conditionally if you are trying to support those browsers.
+### Susy
+Website: [http://susy.oddbird.net/](http://susy.oddbird.net/)
 
-File can be found at:
-base-theme > js > respond.min.js
+Configuration can be found at:
+base-theme > _config.scss = grid configuration
 
-Website: https://github.com/scottjehl/Respond
+### Compass
+Website: [compass-style.org](compass-style.org)
 
-## Modernizr.js
-Modernizr is used for feature detection. It also ships with html5shiv.js which enables HTML5 elements in IE.
+Configuration can be found at:
+base-theme > config.rb = compass configuration
 
-File can be found at:
-base-theme > js > modernizr.min.js
+## Support
+This theme supports modern browsers - so IE9+. If you project requires IE8 support their are options availble to help with that.
 
-Website: http://modernizr.com/
+[Modernizr.js](modernizr.com) is used for feature detection. It also ships with html5shiv.js which enables HTML5 elements in IE.
 
-## Foundation
-We use the basic grid logic from the Foundation library in order to create our grid system.
+[Respond.js](https://github.com/scottjehl/Respond) is a library that allows IE6-8 to read media queries which is essential since we are using a grid system. This should only be loaded conditionally if you are trying to support those browsers.
 
-We are using Foundation for our responsive grids.
-
-Configuration files can be found at:
-base-theme > sass > foundation > settings.scss
-
-Website: http://foundation.zurb.com/
+[Pixrem](https://github.com/gummesson/gulp-pixrem) is a Gulp plugin that is used to convert REM units into pixels for IE fallbacks.

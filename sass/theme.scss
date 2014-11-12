@@ -1,28 +1,11 @@
 // @file Theme
 // This file contains basic theme elements explicitly for this site.
 
+// Theme
+// The structure of this file should be extremely component driven.
+//
+// Each component may have varying sets of attributes including globals, typography, layout, etc.
+// So breaking them down into structures such as Slideshows, Forms, Blog, etc.
+// will allow this file to stay relatively organized.
+
 @import "config";
-
-//
-// Globals
-//
-
-//
-// Typography
-//
-
-//
-// Layout
-//
-
-//
-// Blocks
-//
-
-//
-// Views
-//
-
-//
-// Content
-//

@@ -8,7 +8,8 @@
     "gulp-ruby-sass": "^0.4.3",
     "gulp-sass": "^0.7.1",
     "gulp-util": "^3.0.0",
-    "gulp-watch": "^0.5.3"
+    "gulp-watch": "^0.5.3",
+    "gulp-compass": "^2.0.1"
   },
   "scripts": {
     "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"

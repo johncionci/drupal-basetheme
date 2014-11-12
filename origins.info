@@ -1,5 +1,5 @@
-name = Oomph Base Theme
-description = A responsive blank slate for theme developers.
+name = Origins
+description = A responsive starting point for theme developers.
 version = 7.x-alpha-1
 core = 7.x
 
@@ -16,9 +16,9 @@ stylesheets[print][] = css/print.css
 ; system and module scripts automatically. You can also add scripts
 ; from your template.php with drupal_add_js('scriptname.js', 'theme')
 
-scripts[] = js/modernizr.min.js
-; scripts[] = js/respond.min.js
-; scripts[] = js/script.js
+scripts[] = javascripts/modernizr.min.js
+; scripts[] = javascripts/respond.min.js
+; scripts[] = javascripts/script.js
 
 ; REGIONS
 ; ===================================================
