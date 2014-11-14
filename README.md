@@ -1,5 +1,5 @@
 # Oomph Origins
-Origins uses modern technologies but has options to add in fallbacks for those less fortunate browsers. The particuar client requirements will drive the actual process but Origins includes a great starting point for rapid theme development.
+Origins uses modern technologies but has options to add in fallbacks for those less fortunate browsers. The particular client requirements will drive the actual process but Origins includes a great starting point for rapid theme development.
 
 ## Technologies
 
