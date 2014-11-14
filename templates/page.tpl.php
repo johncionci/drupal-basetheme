@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Oomphbase theme implementation to display a single Drupal page.
@@ -109,73 +108,27 @@
     </div> <!-- header, #header-wrapper -->
 
     <?php if ($page['nav']): ?>
-<<<<<<< HEAD
-      <div id="navigation-wrapper">
-        <nav id="navigation" class="navigation">
-          <?php print render($page['nav']); ?>
-        </nav>
-      </div>
+      <nav id="site-navigation">
+        <?php print render($page['nav']); ?>
+      </nav>
     <?php endif; ?>
 
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb-wrapper">
-        <nav id="breadcrumb" class="breadcrumb">
+        <nav id="breadcrumb">
           <?php print $breadcrumb; ?>
         </nav>
       </div>
     <?php endif; ?>
 
-    <?php if($messages): ?>
-      <div id="sytem-messages-wrapper">
-        <div id="system-messages" class="system-messages">
-          <?php print $messages; ?>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if ($page['content_top']): ?>
-      <section id="content-top" class="section content-top">
-        <?php print render($page['content_top']); ?>
-      </section>
-    <?php endif; ?>
-=======
-      <nav id="site-navigation">
-        <div class="navigation-inner">
-          <?php print render($page['nav']); ?>
-        </div>
-      </nav>
-    <?php endif; ?>
-
-   <!-- hiding breadcrumbs on front-end -->
-    <?php //if ($breadcrumb): ?>
-     <!--  <div id="breadcrumb-wrapper">
-        <nav id="breadcrumb">
-          <div class="breadcrumb-inner"> -->
-            <?php //print $breadcrumb; ?>
-          <!-- </nav>
-        </div>
-      </div> -->
-    <?php //endif; ?>
-
-    <div id="message-wrapper">
-      <div class="message-wrapper-inner">
-        <div class="message-container">
-          <?php print $messages; ?>
-        </div>
-      </div>
-    </div>
->>>>>>> upstream/newdcamp
+    <?php print $messages; ?>
 
     <div id="main-wrapper">
       <main id="main" class="main">
 
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
-          <h1 class="title" id="page-title">
-            <?php print $title; ?>
-          </h1>
-        <?php endif; ?>
+        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
         <?php print render($title_suffix); ?>
 
         <?php if ($tabs): ?>
@@ -184,53 +137,32 @@
           </nav>
         <?php endif; ?>
 
-<<<<<<< HEAD
-        <?php if ($page['help']): ?>
-          <section id="help" class="section help">
-            <?php print render($page['help']); ?>
+        <?php print render($page['help']); ?>
+
+        <?php if ($action_links): ?>
+          <ul class="action-links">
+            <?php print render($action_links); ?>
+          </ul>
+        <?php endif; ?>
+
+        <?php if ($page['content_top']): ?>
+          <section id="content-top" class="section content-top">
+            <?php print render($page['content_top']); ?>
           </section>
         <?php endif; ?>
-=======
-        <section id="content" class="section content">
-          <?php print render($page['help']); ?>
->>>>>>> upstream/newdcamp
 
-          <?php if ($action_links): ?>
-            <ul class="action-links">
-              <?php print render($action_links); ?>
-            </ul>
-          <?php endif; ?>
-
-<<<<<<< HEAD
         <section id="content" class="section content">
           <?php print render($page['content']); ?>
         </section>
 
-        <?php if ($feed_icons): ?>
-          <div id="feed-icons">
-            <?php print $feed_icons; ?>
-          </div>
+        <?php if ($page['content_bottom']): ?>
+          <section id="content-bottom" class="section content-bottom">
+            <?php print render($page['content_bottom']); ?>
+          </section>
         <?php endif; ?>
 
-=======
-          <?php if ($page['content_top']): ?>
-            <section id="content-top" class="section content-top">
-              <?php print render($page['content_top']); ?>
-            </section>
-          <?php endif; ?>
+        <?php print $feed_icons; ?>
 
-            <?php print render($page['content']); ?>
-
-          <?php if ($page['content_bottom']): ?>
-            <section id="content-bottom" class="section content-bottom">
-              <?php print render($page['content_bottom']); ?>
-            </section>
-          <?php endif; ?>
-
-          <?php print $feed_icons; ?>
-        </section>
-
->>>>>>> upstream/newdcamp
         <?php if ($page['sidebar_first']): ?>
           <section id="sidebar-first" class="section sidebar">
             <?php print render($page['sidebar_first']); ?>
@@ -245,12 +177,6 @@
 
       </main>
     </div> <!-- main, /#main-wrapper -->
-
-    <?php if ($page['content_bottom']): ?>
-      <section id="content-bottom" class="section content-bottom">
-        <?php print render($page['content_bottom']); ?>
-      </section>
-    <?php endif; ?>
 
     <div id="footer-wrapper">
       <footer id="footer" class="footer">
