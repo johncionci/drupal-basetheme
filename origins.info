@@ -1,13 +1,13 @@
-name = Oomph Base Theme
-description = A responsive blank slate for theme developers.
-version = 7.x-alpha-1
+name = origins
+description = A responsive starting point for Drupal theme developers.
+version = 7.x-beta-1
 core = 7.x
 
 ; STYLESHEETS
 ; ===================================================
 
-stylesheets[all][] = css/theme.css
-stylesheets[print][] = css/print.css
+stylesheets[all][] = stylesheets/theme.css
+stylesheets[print][] = stylesheets/print.css
 
 ; SCRIPTS
 ; ===================================================
@@ -16,7 +16,9 @@ stylesheets[print][] = css/print.css
 ; system and module scripts automatically. You can also add scripts
 ; from your template.php with drupal_add_js('scriptname.js', 'theme')
 
-; scripts[] = js/script.js
+scripts[] = js/modernizr.min.js
+scripts[] = js/respond.min.js
+scripts[] = js/script.js
 
 ; REGIONS
 ; ===================================================
@@ -30,8 +32,10 @@ regions[page_top]     = Page top
 regions[page_bottom]  = Page bottom
 
 ; Other required regions that are not hidden are [help, content, footer]
+regions[utility]         = Utility
 regions[header]          = Header
 regions[nav]             = Navigation
+regions[featured]        = Featured
 regions[help]            = Help
 regions[content_top]     = Content top
 regions[content]         = Content
